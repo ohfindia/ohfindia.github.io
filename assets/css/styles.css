@@ -494,7 +494,7 @@ h6 {
 
 #hero h1 {
 	margin: 0;
-	font-size: 48px;
+	font-size: 54px;
 	font-weight: 700;
 	line-height: 56px;
 	color: #222222;
@@ -570,6 +570,13 @@ h6 {
 
 
 /*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+#team p{
+	font-size: 1.2rem;
+}
+
+/*--------------------------------------------------------------
 # Pricing Styles
 --------------------------------------------------------------*/
 .pricing-tab-content{
@@ -585,6 +592,10 @@ h6 {
 
 .pricing-tab-content .content{
 	width: 60%;
+}
+
+.pricing-tab-content .content p{
+	font-size: 1.3rem;
 }
 
 #owner-operator{
