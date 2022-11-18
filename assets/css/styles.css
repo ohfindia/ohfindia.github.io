@@ -494,7 +494,7 @@ h6 {
 
 #hero h1 {
 	margin: 0;
-	font-size: 54px;
+	font-size: 63px;
 	font-weight: 700;
 	line-height: 56px;
 	color: #222222;
@@ -508,12 +508,13 @@ h6 {
 #hero h2 {
 	color: #555555;
 	margin: 12px 0 30px 0;
-	font-size: 21px;
+	font-size: 25px;
 	font-weight: 400;
+	margin-top: 23px;
 }
 
 #hero #hero-content{
-	width: 50%;
+	width: 60%;
 }
 
 #hero .btn-get-started {
