@@ -531,7 +531,7 @@ h6 {
 	width: 60%;
 }
 
-#hero .btn-get-started, #cta-learn-more .btn-get-started {
+#hero .btn-get-started, #learn-more .btn-get-started {
 	font-family: "Roboto", sans-serif;
 	text-transform: uppercase;
 	font-weight: 500;
@@ -662,7 +662,7 @@ h6 {
 /*--------------------------------------------------------------
 # CTA: Learn More
 --------------------------------------------------------------*/
-#cta-learn-more{
+#learn-more{
 	min-height: 450px;
 	background-image: linear-gradient(180deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url('../images/cta-background.jpg');
 	background-position: center center;
@@ -671,16 +671,16 @@ h6 {
 	color: white;
 }
 
-#cta-learn-more .cta-heading{
+#learn-more .cta-heading{
 	font-weight: bold;
 	font-size: 50px;
 }
 
-#cta-learn-more p{
+#learn-more p{
 	font-size: 20px;
 }
 
-#cta-learn-more .cta-wrapper{
+#learn-more .cta-wrapper{
 	padding: 2.7em;
 	max-width: 60%;
 	background-color: rgba(0, 0, 0, 0.6);

@@ -47,7 +47,6 @@
       if(!navbarLink.hash) return;
       let section = document.querySelector(navbarLink.hash);
       if(!section) return;
-      console.log(window.scrollY,position,section.offsetTop,section.offsetHeight);
       if(position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)){
         navbarLink.classList.add('active')
       } else{
