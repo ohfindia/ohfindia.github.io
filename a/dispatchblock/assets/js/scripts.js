@@ -123,4 +123,15 @@
     // AOS.init();
   });
 
+  /**
+   * Handle Form Submit
+   */
+  const handleFormSubmit = (e)=>{
+    e.preventDefault();
+    console.log(e);
+  }
+
+  var form = document.getElementById('contact-form');
+  form.addEventListener('submit',handleFormSubmit);
+
 })()
