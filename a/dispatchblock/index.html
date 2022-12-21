@@ -14,7 +14,7 @@
 
         <!-- ======= Top Social ======= -->
         <section class="d-flex align-items-center" id="topbar">
-            <div class="container d-flex justify-content-center justify-content-md-between">
+            <div class="container d-flex justify-content-between">
                 <div class="contact-info d-flex align-items-center">
                     <i class="fa fa-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
                     <i class="fa fa-phone d-flex align-items-center ms-4"><a href="tel:+155895548855">+1 5589 55488 55</a></i>
@@ -280,9 +280,8 @@
             </div>
         </footer><!-- End Footer -->
 
-
         <!-- ======= Contact Modal ======= -->
-        <form id="contact-form" action="https://google.com">
+        <form id="contact-form" method="post" target="" style="margin: 0px;">
             <div class="modal fade" data-bs-backdrop="static" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-scrollable">
                     <div class="modal-content border-0">
@@ -295,23 +294,23 @@
                                 <p class="text-muted">Please fill out the following information and we shall get back to you.</p>
                                 <div class="mb-3 col-md-6">
                                     <label for="l-name" class="col-form-label">Name:</label>
-                                    <input required type="text" class="form-control" id="l-name">
+                                    <input required type="text" name="entry.1496735865" class="form-control" id="l-name">
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <label for="l-phone" class="col-form-label">Phone:</label>
-                                    <input required type="phone" class="form-control" id="l-phone">
+                                    <input required type="phone" name="entry.1761646476" class="form-control" id="l-phone">
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <label for="l-email" class="col-form-label">Email:</label>
-                                    <input required type="email" class="form-control" id="l-email">
+                                    <input required type="email" name="entry.28372919" class="form-control" id="l-email">
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <label for="l-trucks" class="col-form-label">Number of Trucks:</label>
-                                    <input required type="number" class="form-control" id="l-trucks">
+                                    <input required type="number" name="entry.1572059064" class="form-control" id="l-trucks">
                                 </div>
                                 <div class="mb-3 col-md-12">
                                     <label for="l-equipment" class="col-form-label">Equipment:</label>
-                                    <select required class="form-select" id="l-equipment">
+                                    <select required class="form-select" name="entry.1630723818" id="l-equipment">
                                         <option>--Select--</option>
                                         <option value="Dry Van">Dry Van</option>
                                         <option value="Reefer">Reefer</option>
@@ -326,7 +325,6 @@
                 </div>
             </div>
         </form>
-            
             
         <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
                 class="fa fa-arrow-up"></i></a>

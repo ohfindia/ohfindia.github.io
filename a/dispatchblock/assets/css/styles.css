@@ -487,7 +487,7 @@ h6 {
 #hero {
 	width: 100%;
 	height: 75vh;
-	background: url("../img/hero-bg.jpg") top left;
+	/* background: url("../img/hero-bg.jpg") top left; */
 	background-size: cover;
 	position: relative;
 }
@@ -549,19 +549,13 @@ h6 {
 	background: #247cf0;
 }
 
-@media (min-width: 1024px) {
-	#hero {
-		background-attachment: fixed;
-	}
-}
-
 @media (max-width: 768px) {
 	#hero {
-		height: 100vh;
+		height: 70vh;
 	}
 
 	#hero h1 {
-		font-size: 28px;
+		font-size: 41px;
 		line-height: 36px;
 	}
 
@@ -578,8 +572,23 @@ h6 {
 }
 
 @media (max-height: 500px) {
-	#hero {
+	/* #hero {
 		height: 120vh;
+	} */
+
+	#hero #hero-content{
+		width: 100%;
+	}
+
+	#hero h1 {
+		font-size: 38px;
+		line-height: 45px;
+	}
+
+	#hero h2 {
+		font-size: 18px;
+		line-height: 24px;
+		margin-bottom: 30px;
 	}
 }
 
@@ -611,6 +620,31 @@ h6 {
 
 .pricing-tab-content .content p{
 	font-size: 1.3rem;
+}
+
+@media (max-width: 800px) {
+	.pricing-tab-content {
+		padding: 6rem;
+	}
+	.pricing-tab-content .content {
+		width: 100%;
+	}
+}
+
+@media (max-width: 500px) {
+	.pricing-tab-content {
+		padding: 5rem 1rem;
+	}
+
+	.pricing-tab-content h3 {
+		font-size: 36px;
+		margin: 25px 0px;
+	}
+
+	.pricing-tab-content .content p {
+		font-size: 1rem;
+	}
+
 }
 
 #owner-operator{
@@ -684,6 +718,29 @@ h6 {
 	padding: 2.7em;
 	max-width: 60%;
 	background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 800px){
+	#learn-more {
+		min-height: 500px;
+	}
+	#learn-more .cta-wrapper {
+		padding: 2.7em;
+		max-width: 90%;
+	}
+}
+
+@media (max-width: 500px){
+	#learn-more {
+		min-height: 450px;
+	}
+	#learn-more .cta-heading {
+		font-size: 40px;
+	}
+
+	#learn-more p {
+		font-size: 15px;
+	}
 }
 
 
