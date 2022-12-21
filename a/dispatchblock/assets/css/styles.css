@@ -11,6 +11,10 @@ body {
 	color: var(--basic-font-color-dark);
 }
 
+.body-wrapper{
+	overflow-x: hidden;
+}
+
 a {
 	color: var(--primary-website-color);
 	text-decoration: none;
@@ -191,6 +195,7 @@ h6 {
 	height: 70px;
 	position: fixed;
 	animation: navbar-animation 0.2s;
+	width: 100vw;
 }
 
 @keyframes navbar-animation {
@@ -210,6 +215,12 @@ h6 {
 	font-weight: 600;
 	letter-spacing: 0.8px;
 	font-family: "Poppins", sans-serif;
+}
+
+@media (max-width:800){
+	#header .logo{
+		
+	}
 }
 
 #header .logo a {
@@ -528,7 +539,7 @@ h6 {
 }
 
 #hero #hero-content{
-	width: 60%;
+	width: 69%;
 }
 
 #hero .btn-get-started, #learn-more .btn-get-started {
@@ -589,6 +600,12 @@ h6 {
 		font-size: 18px;
 		line-height: 24px;
 		margin-bottom: 30px;
+	}
+}
+
+@media (min-width: 2000px){
+	#hero{
+		height: 45vh;
 	}
 }
 
