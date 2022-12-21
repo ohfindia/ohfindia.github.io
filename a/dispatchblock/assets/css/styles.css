@@ -186,7 +186,7 @@ h6 {
 	background: #fff;
 	transition: ease-in 0.6s all;
 	opacity: 1;
-	z-index: 997;
+	z-index: 600;
 	height: 86px;
 	box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
@@ -215,12 +215,6 @@ h6 {
 	font-weight: 600;
 	letter-spacing: 0.8px;
 	font-family: "Poppins", sans-serif;
-}
-
-@media (max-width:800){
-	#header .logo{
-		
-	}
 }
 
 #header .logo a {
@@ -395,6 +389,7 @@ h6 {
 
 	.navbar ul {
 		display: none;
+		transition: 0.3s;
 	}
 }
 
@@ -406,12 +401,13 @@ h6 {
 	left: 0;
 	bottom: 0;
 	background: rgba(9, 9, 9, 0.9);
-	transition: 0.3s;
 	z-index: 999;
+	transition: all 0.3s linear 0s;
 }
 
 .navbar-mobile .mobile-nav-toggle {
 	position: absolute;
+	display: none;
 	top: 15px;
 	right: 15px;
 }
@@ -419,14 +415,29 @@ h6 {
 .navbar-mobile ul {
 	display: block;
 	position: absolute;
-	top: 55px;
-	right: 15px;
-	bottom: 15px;
-	left: 15px;
+	width: 280px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	/* left: 30px; */
 	padding: 10px 0;
 	background-color: #fff;
 	overflow-y: auto;
-	transition: 0.3s;
+	transition: all 0.3s linear 0s;
+}
+
+.drawer-in{
+	animation: navbaranimation 0.3s;
+}
+
+@keyframes navbaranimation {
+	0% {
+		transform: translateX(100%);
+	}
+
+	100% {
+		transform: translateX(0%);
+	}
 }
 
 .navbar-mobile a,
@@ -434,6 +445,16 @@ h6 {
 	padding: 10px 20px;
 	font-size: 15px;
 	color: #222222;
+}
+
+.navbar-mobile .mobile-nav-name{
+	line-height: 1;
+	font-size: 18px;
+	padding: 10px 20px;
+	font-weight: 600;
+	letter-spacing: 0.8px;
+	font-family: "Poppins", sans-serif;
+	color: var(--primary-website-color);
 }
 
 .navbar-mobile>ul>li {
