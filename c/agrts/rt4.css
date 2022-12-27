@@ -82,7 +82,7 @@ li{
 
 .bread-row{
     height: 300px;
-    background-image: url('/images/img05.jpg');
+    background-image: url('./images/img05.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -390,7 +390,7 @@ li{
 /* start leadership */
 
 .leadership-section{
-    background-image: url('/images/White.jpg') ;
+    background-image: url('./images/White.jpg') ;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -856,7 +856,7 @@ input[type="file"]::file-selector-button:hover{
     text-align: center;
     display: grid;
     justify-content: center;
-    background-image: url('/images/pngwing.png');
+    background-image: url('./images/pngwing.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -955,7 +955,7 @@ input[type="file"]::file-selector-button:hover{
 /* start login page  */
 
 .login-section{
-    background-image: url('/images/colleagues-working-project-discussing-details.jpg');
+    background-image: url('./images/colleagues-working-project-discussing-details.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
