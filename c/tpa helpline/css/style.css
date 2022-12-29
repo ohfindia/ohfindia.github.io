@@ -31,6 +31,18 @@ li{
     padding: 4rem 0;
 }
 
+:focus{
+    outline: none;
+}
+
+.blue{
+    color:#112D4E;
+}
+
+.blue-bg{
+    background-color: #112D4E;
+}
+
 /* start navbar  */
 
 .navbar {
@@ -41,13 +53,19 @@ li{
     color: black;
 }
 
-.nav-link{
-    color: black;
-    position: relative;
+.main-nav-tabs{
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.nav-link:hover{
+.tpa-link{
+    margin: 0 1rem;
+    position: relative;
     color: black;
+}
+
+.tpa-link:hover{
+    color: #112D4E;
 }
 
 .tpa-link::before{
@@ -60,4 +78,74 @@ li{
     background: #efefef;
 }
 
+.tpa-link::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: #112D4E;
+    transition: .3s all;
+}
+
+.tpa-link:hover::after{
+    width: 100%;
+}
+
+.log-btn{
+    border: 1px solid #112D4E;
+    color: #112D4E;
+    border-radius: 5px;
+}
+
+.log-btn:hover{
+    background-color: #112D4E;
+    color: white;
+}
+
+.join-btn{
+    color: white;
+    background-color: #112D4E;
+    border: 1px solid #112D4E;
+    border-radius: 5px;
+}
+
+.join-btn:hover{
+    color: white;
+    background-color: #10345e;
+}
+
+.register a{
+    font-size: 14px;
+}
+
 /* end navbar  */
+
+/* start header  */
+
+.header-section{
+    background-image: url('../images/doctor-nurse.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    width: auto;
+    background-blend-mode: soft-light;
+    background-color: rgba(255, 255, 255, 0.158);
+}
+
+.header-row{
+    height: 90vh;
+}
+
+/* end header  */
+
+/* start section  */
+
+.start-row .col p{
+    line-height: 2;
+    text-align: justify;
+}
+
+/* end section  */
