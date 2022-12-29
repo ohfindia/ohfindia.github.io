@@ -31,36 +31,14 @@ li{
     padding: 4rem 0;
 }
 
-:focus{
-    outline: none;
-}
-
-.border-btn{
-    color: black;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 0.3rem 0.5rem;   
-    text-align: center;
-}
-
-.black-btn{
-    color: white;
-    background-color: black;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 0.3rem 0.5rem;   
-    text-align: center;
-}
-
-.black-btn:hover{
-    color: white;
-    background-color: rgba(0, 0, 0, 0.700);
-}
-
 /* start navbar  */
 
 .navbar {
     padding: 1rem 4rem;
+}
+
+.navbar-toggler{
+    color: black;
 }
 
 .nav-link{
@@ -72,7 +50,7 @@ li{
     color: black;
 }
 
-.nav-link::before{
+.tpa-link::before{
     position: absolute;
     content: '';
     left: 0;

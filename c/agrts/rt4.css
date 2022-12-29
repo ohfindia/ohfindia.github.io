@@ -373,6 +373,7 @@ li{
     height: 600px;
     padding: 2rem 3rem;
     margin: 0 2rem;
+    text-align: justify;
 }
 
 .mv-icons{
@@ -820,13 +821,7 @@ input[type="file"]::file-selector-button:hover{
 
 /* end about us page  */
 
-/* start services page  */
-
-.services-row-1 h3{
-    color: var(--logo-blue);
-    text-transform: uppercase;
-    font-weight: bold;
-} 
+/* start services page  */ 
 
 .services-row-2{
     text-align: center;
@@ -850,7 +845,6 @@ input[type="file"]::file-selector-button:hover{
 }
 
 .jobs-img-col{
-    /* border-radius: 52% 48% 38% 62% / 76% 47% 53% 24% ; */
     position: relative;
     z-index: -1;
     text-align: center;
@@ -868,61 +862,40 @@ input[type="file"]::file-selector-button:hover{
 }
 
 .jobs-heading{
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 900;
     color: var(--logo-pink);
-}
-
-.job-cards{
-    border: 1px solid rgba(0, 0, 0, 0.224);
-    border-radius: 10px;
-    padding: 1rem;
-}
-
-.job-info-btn{
-    font-size: 13px;
-    padding: 0.5rem;
-    background: var(--logo-blue);
-    color: white;
-    border-radius: 25px;
-    margin-right: 0.5rem;
-    white-space: nowrap;
-}
-
-.job-info-btn-1{
-    background-color: #FF5858;
-}
-
-.job-info-btn-2{
-    background-color: #59CE8F;
-}
-
-.job-info-btn-3{
-    background-color: #D09CFA;
-}
-
-.job-post-card{
-    border: 1px solid rgba(0, 0, 0, 0.224);
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
-}
-
-.job-post-card:hover{
-    border: 1px solid rgba(0, 0, 0, 0.493);
-}
-
-.post{
-    display: flex;
-    justify-content: space-between;
 }
 
 .jobs-row-2{
     margin-top: 2rem;
 }
 
+.jobs-row-2 h3{
+    color: var(--logo-blue);
+}
+
 .jobs-row-2 .col-12{
     margin: 1rem 0;
 }
+
+.jobs-col .outer-ul {
+    padding-left: 0;
+}
+
+.jobs-col li a{
+    line-height: 2;
+}
+
+.jobs-col li a:hover{
+    color: var(--logo-blue);
+}
+
+.right-icon{
+    margin-right: 0.5rem;
+}
+
+
 
 /* end jobs page  */
 
