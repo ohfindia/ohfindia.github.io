@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Agrts</title>
+    <title>Recruitment | Agrts</title>
     <link rel="icon" type="images" href="images/favicon.png">
     <!-- google font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,12 +45,14 @@
     <section class="upper-note">
         <div class="container">
             <div class="row">
-                <span>NOTE* : <span class="bold">AGRTS</span> gives you a single window access to all relevant jobs
-                    without hopping from site to site</span>
+                <div class="col text-center">
+                    <a href="tel:+91-9988710610" class="mx-1 text-white">Call Info : <i class="fa-solid fa-phone-volume"></i> +91-9988710610</a>
+                    <a href="mailto:info@agrts.com" class="mx-1 text-white">Mail Id : <i class="fa-solid fa-at"></i> info@agrts.com</a>
+                </div>
             </div>
         </div>
     </section>
-
+    
     <!-- end note  -->
 
     <!-- start navbar  -->
@@ -90,91 +92,28 @@
 
     <!-- end navbar  -->
 
-    <!-- start breadcrumb  -->
+    <!-- start thank you page  -->
 
-    <section>
-        <div class="container-fluid">
-            <div class="row bread-row">
-                <h1 class="bold">Contact Us</h1>
-            </div>
-        </div>
-    </section>
-
-    <!-- end breadcrumb -->
-
-    <!-- start contact us page  -->
-
-    <section class="space">
+    <section class="py-5">
         <div class="container">
-            <div class="row contact-info-row">
-                <div class="col-md-4">
-                    <div>
-                        <i class="fa-solid fa-phone info-icons"></i>
-                        <a href="">
-                            <p class="mb-0">+91-9988710610</p>
-                        </a>
-                    </div>
+            <div class="row thank-row">
+                <div class="col-md-6">
+                    <img src="images/thankyou.gif" class="img-fluid" alt="">
                 </div>
-                <div class="col-md-4">
-                    <div>
-                        <i class="fa-solid fa-location-dot info-icons"></i>
-                        <p class="mb-0">SCO 2417-18, 2nd floor, Sector 22-C, Chandigarh - 160022</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div>
-                        <i class="fa-solid fa-envelope info-icons"></i>
-                        <p class="mb-0">info@agrts.com</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row contact-form-row">
-                <div class="col-md-6 order-md-1 order-2">
-                    <form action="form.php" class="form" method="post" enctype="text/plain">
-                        <div class="row">
-                            <div class="col-sm-6 my-3">
-                                <input type="text" name="name" class="agrts-input" id="name" placeholder="Name"
-                                    required>
-                            </div>
-                            <div class="col-sm-6 my-3">
-                                <input type="text" name="email" class="agrts-input" id="email" placeholder="Email Id"
-                                    required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 my-3">
-                                <input type="text" name="subject" class="agrts-input" id="subject" placeholder="Subject"
-                                    required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 my-3">
-                                <textarea name="" name="message" class="agrts-input" id="message"
-                                    placeholder="Message"></textarea>
-                            </div>
-                        </div>
-                        <div class="mt-3">
-                            <!-- <a class="submit-btn" id="sb-btn">Submit</a> -->
-                            <input type="submit" class="submit-btn" value="send" onclick="sendemail()">
-                        </div>
-                    </form>
-                </div>
-                <div class="col-md-6 order-md-2 order-1">
-                    <img src="images/2481145.png" class="img-fluid contact-us-img" alt="">
-                    <p class="text-center mb-md-0 mb-5">Let's get this conversation started. Fill this form, and we'll
-                        get in touch as soon as we can.</p>
+                <div class="col-md-6 thankyou-col">
+                    <h1 class="">Thank You</h1>
+                    <h5>for</h5>
+                    <h3>Submitting the form</h3>
                 </div>
             </div>
         </div>
     </section>
+    
+    <!-- end thank you page  -->
 
-    <!-- end contact us page  -->
+     <!-- start footer  -->
 
-    <!-- start footer  -->
-
-    <footer class="space footer-section">
+     <footer class="space footer-section">
         <div class="container">
             <div class="row footer-row">
                 <div class="col-md-6 col-lg-3 foot-col1">
@@ -199,7 +138,7 @@
                         <a href="mailto:info@agrts.com"><i class="fa-solid fa-at"></i> info@agrts.com</a>
                     </li>
                     <li>
-                        <a href=""><i class="fa-solid fa-location-crosshairs"></i> SCO 2417-18, 2nd floor,
+                        <a href=""><i class="fa-solid fa-location-crosshairs"></i> SCO 2417-18, 2nd floor, 
                             Sector 22-C, Chandigarh - 160022</a>
                     </li>
                 </div>
@@ -237,33 +176,6 @@
     <script>
         AOS.init();
     </script>
-    <!-- smtp script  -->
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendemail() {
-
-            var name = document.getElementById('name').value ;
-            var email = document.getElementById('email').value ;
-            var subject = document.getElementById('subject').value ;
-            var message = document.getElementById('message').value ;
-
-            var body = "Name : " + name + "<br/>Email : " + email + "<br/>Subject : " + subject + "<br/>Message : " + message;  
-
-            Email.send({
-                Host: "smtp.elasticemail.com",
-                Username: "c55795374@gmail.com",
-                Password: "98CDF06B146183BCC6BEA0224AD7F2223B92",
-                To: 'c55795374@gmail.com',
-                From: "c55795374@gmail.com",
-                Subject: "New Contact form Submission",
-                Body: body
-            }).then(
-                message => alert("Mail Sent Successfully !")
-            );
-
-        }
-    </script>
-
 </body>
 
 </html>

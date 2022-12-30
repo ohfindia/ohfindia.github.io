@@ -167,7 +167,7 @@
                             </div>
                         </div>
                         <div class="mt-3">
-                            <a class="submit-btn" id="sb-btn" onclick="sendemail()">Submit</a>
+                            <a class="submit-btn" name="submit" id="sb-btn" onclick="sendemail()">Submit</a>
                         </div>
                     </form>
                 </div>
@@ -265,12 +265,12 @@
                 Host: "smtp.elasticemail.com",
                 Username: "c55795374@gmail.com",
                 Password: "98CDF06B146183BCC6BEA0224AD7F2223B92",
-                To: '',
+                To: 'info@agrts.com',
                 From: "c55795374@gmail.com",
                 Subject: "New Contact form Submission",
                 Body: body
             }).then(
-                message => alert("Mail sent Successfully !!!")
+                window.location.href="./thankyou.html"
             );
 
         }

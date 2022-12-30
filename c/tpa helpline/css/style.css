@@ -43,14 +43,41 @@ li{
     background-color: #112D4E;
 }
 
+.heading-style{
+    display: inline-block;  
+    position: relative;
+    color: #112D4E;
+}
+
+.heading-style::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: #efefef;
+}
+
+.heading-style::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: #112D4E;
+    transition: .3s all;
+}
+
+.heading-style:hover::after{
+    width: 100%;
+}
+
 /* start navbar  */
 
 .navbar {
     padding: 1rem 4rem;
-}
-
-.navbar-toggler{
-    color: black;
 }
 
 .main-nav-tabs{
@@ -120,6 +147,14 @@ li{
     font-size: 14px;
 }
 
+.navbar-toggler{
+    border: none;
+}
+
+.navbar-toggler:active, .navbar-toggler:focus{
+    outline: none !important;
+}
+
 /* end navbar  */
 
 /* start header  */
@@ -149,3 +184,88 @@ li{
 }
 
 /* end section  */
+
+/* start claim section  */
+
+.claim-section{
+    background-image: url('../images/doctor-is-going-examine-his-patient-using-his-stethoscope-sitting-people.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.claim-text{
+    text-align: justify;
+}
+
+/* end claim section  */
+
+/* start about tpa  */
+
+.number{
+    font-size: 3rem;
+}
+
+/* end about tpa  */
+
+/* start footer  */
+
+.footer-icons{
+    color:#112D4E;
+    background-color: white;
+    padding: 0.3rem;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    margin-right: 0.5rem;
+    box-shadow: 3px 3px 0 0 #495579;
+}
+
+.footer-link{
+    transition: 0.3s all;
+}
+
+.footer-link:hover{
+    padding-left:0.5rem;
+}
+
+/* end footer  */
+
+/* media queries  */
+
+@media(max-width: 992px){
+    .main-nav-tabs{
+        margin: 0;
+    }
+
+    .tpa-link{
+        margin: 0;
+    }
+    .tpa-link::before{
+        width: 0%;
+    }
+    
+    .tpa-link:hover::after{
+        width: 0%;
+    }
+    .col-lg-6:nth-of-type(2){
+        margin-top: 2rem;
+    }
+}
+
+@media(max-width: 768px){
+    .header-row{
+        height: 100vh;
+    }
+
+    .foot-col{
+        margin: 2rem 0;
+    }
+}
+
+@media(max-width: 560px){
+    .navbar{
+        padding: 1rem;
+    }
+}
