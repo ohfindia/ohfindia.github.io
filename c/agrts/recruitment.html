@@ -139,8 +139,13 @@
                         <div class="col-md-6 my-3 d-flex align-items-end">
                             <input type="text" id="code" class="agrts-input mb-2" placeholder="Referal Code / Name (if any)" required>
                         </div>
+                        <div class="col-md-6 my-3">
+                            <label for="resume" class="form-label">Upload Resume *</label>
+                            <input type="file" name="resume" id="resume" class="agrts-input" placeholder="" accept=".pdf,.docx, .doc" required>
+                            <label style="color: #c4c4c4;">Accepted Format : .pdf, .docx</label>
+                        </div>
                         <div class="mt-3">
-                            <a name="submit" onclick="submitform()" class="submit-btn">Submit</a>
+                            <button type="submit" name="submit" id="sb-btn" class="submit-btn">Submit</button>
                         </div>
                     </div>
                 </form>
@@ -218,31 +223,59 @@
     <!-- smtp script  -->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
-        function submitform() {
+        var rForm = document.querySelector('form');
 
-            var fullname = document.getElementById('fullname').value ;
-            var email = document.getElementById('email').value ;
-            var number = document.getElementById('number').value ;
-            var salary = document.getElementById('salary').value ;
-            var remarks = document.getElementById('remarks').value ;
-            var code = document.getElementById('code').value ;
+        rForm.addEventListener('submit', (e) => {
+            e.preventDefault();
 
+            var fullname = document.getElementById('fullname').value;
+            var email = document.getElementById('email').value;
+            var number = document.getElementById('number').value;
+            var salary = document.getElementById('salary').value;
+            var remarks = document.getElementById('remarks').value;
+            var resume = document.getElementById('resume').files[0];
+            var code = document.getElementById('code').value;
 
-            var body = "Full Name : " + fullname + "<br/>Email : " + email +"<br/>Contact Number : " + number + "<br/>Salary : " + salary + "<br/>Remarks : " + remarks + "<br/>Code : " + code ;  
+            const formData = new FormData();
+            formData.append('resume', resume);
 
-            Email.send({
-                Host: "smtp.elasticemail.com",
-                Username: "c55795374@gmail.com",
-                Password: "98CDF06B146183BCC6BEA0224AD7F2223B92",
-                To: 'info@agrts.com',
-                From: "c55795374@gmail.com",
-                Subject: "New Recruitment form Submission",
-                Body: body
-            }).then(
-                window.location.href="./thankyou.html"
-            );
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
 
-        }
+                    const file = JSON.parse(xhttp.responseText);
+
+                    var body = `Full Name: ${fullname}
+                    <br/> Email: ${email}
+                    <br/> Contact Number: ${number}
+                    <br/> Salary: ${salary}
+                    <br/> Code: ${code}
+                    <br/> Remarks: ${remarks}
+                    `;
+
+                    Email.send({
+                        Host: "smtp.elasticemail.com",
+                        Username: "c55795374@gmail.com",
+                        Password: "98CDF06B146183BCC6BEA0224AD7F2223B92",
+                        To: "info@agrts.com",
+                        From: "c55795374@gmail.com",
+                        Subject: "New Recruitment form Submission",
+                        Body: body,
+                        Attachments: [{
+                            name: file.name,
+                            path: file.url
+                        }]
+                    }).then(
+                        message => window.location.href="https://agrts.com/thankyou.html"
+                    );
+                } else{
+                    alert('There was some issue with uploading file');
+                }
+            };
+            xhttp.open("POST", "uploadresume.php", true);
+            xhttp.send(formData);
+        })
+
     </script>
 </body>
 

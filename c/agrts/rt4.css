@@ -31,6 +31,14 @@ li{
     padding: 4rem 0;
 }
 
+.pink-clr{
+    color: var(--logo-pink);
+}
+
+.blue-clr{
+    color: var(--logo-blue);
+}
+
 :root{
     --logo-blue : #36c1df; 
     --logo-pink : #eb008c;
@@ -560,13 +568,13 @@ li{
     border-radius: 50%;
 }
 
-.mid-icon-row .col-md-3{
+.mid-icon-row .col{
     display: grid;
     justify-items: center;
     justify-content: center;
 }
 
-.mid-icon-row .col-md-3 p{
+.mid-icon-row .col p{
     color: var(--logo-blue);
     margin-top: 1rem;
     font-weight: bold;
