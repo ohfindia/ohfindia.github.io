@@ -19,15 +19,15 @@ a{
 }
 
 .heading-clr{
-    color:#5F8D4E;
+    color:#285430;
 }
 
 .heading-clr:hover{
-    color:#5F8D4E;
+    color:#285430;
 }
 
 :root{
-    --main-clr: #5F8D4E;
+    --main-clr: #285430;
 }
 
 :focus{
@@ -86,6 +86,10 @@ a{
     display: block;
 }
 
+.navbar-toggler{
+    border: none;
+}
+
 
 /* header  */
 
@@ -100,7 +104,8 @@ a{
 
 .header-row{
     height: 100vh;
-    color:var(--main-clr);
+    /* color:var(--main-clr); */
+    color: white;
 }
 
 .header-col{
@@ -112,6 +117,7 @@ a{
     white-space: nowrap;
     overflow: hidden;
     animation: text-ani 5.5s 1;
+    text-transform: capitalize;
 }
 
 @keyframes text-ani{
@@ -125,13 +131,13 @@ a{
 
 .header-sub-head{
     font-size: x-large;
+    text-transform: capitalize;
 }
 
 /* card  */
 
 .propty-card{
-    height: 400px;
-    width: auto;
+    padding: 4rem 2rem;
     box-shadow: 8px 8px 0px 0 var(--main-clr);
     border-radius: 0;
     transition: 0.3s all;
@@ -155,6 +161,7 @@ a{
     padding: 0.5rem 1.5rem;
     border-radius: 3px;
     text-transform: uppercase;
+    margin-top: 1rem;
 }
 
 .propty-heading{
@@ -167,7 +174,7 @@ a{
 .propty-heading::after{
     position: absolute;
     content: '';
-    left: 42%;
+    left: 40%;
     bottom: 0;
     width: 20%;
     height: 3px;
@@ -233,11 +240,15 @@ a{
 }
 
 .buy-section{
-    background-image: url('../images/buy-a-property.jpeg');
+    background-image: url('../images/buy.jpg');
 }
 
 .sell-section{
-    background-image: url('../images/sell.jpg');
+    background-image: url('../images/real-estate-agent.jpg');
+}
+
+.rent-section{
+    background-image: url('../images/rent.jpg');
 }
 
 /* buy sell rent property form  */
@@ -267,4 +278,46 @@ a{
 
 .propty-clickable-card p{
     color: white;
+}
+
+@media (max-width:1200px){
+    .header-main-head{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 992px){
+    .header-main-head{
+        font-size: 2.5rem;
+    }
+    .header-sub-head{
+        font-size: large;
+    }
+}
+
+@media (max-width: 768px){
+    .header-main-head{
+        font-size: 2rem;
+    }
+    .header-sub-head{
+        font-size: large;
+    }
+}
+
+@media (max-width: 560px){
+    .header-main-head{
+        font-size: 1.2rem;
+    }
+    .header-sub-head{
+        font-size: small;
+    }
+    .navbar-brand{
+        font-size: large;
+    }
+    .footer-row .col-lg-4{
+        margin: 0.5rem 0;
+    }
+    .propty-card{
+        padding: 2rem 1rem;
+    }
 }
