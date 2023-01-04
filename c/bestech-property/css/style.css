@@ -1,0 +1,270 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.heading-clr{
+    color:#5F8D4E;
+}
+
+.heading-clr:hover{
+    color:#5F8D4E;
+}
+
+:root{
+    --main-clr: #5F8D4E;
+}
+
+:focus{
+    outline : none;
+}
+
+.space{
+    padding: 3rem 0;    
+}
+
+/* navbar */
+
+.navbar{
+    background-color: white;
+    position: absolute;
+    width: 90%;
+    margin-top: 1rem;
+    left: 5%;
+}
+
+.navbar-brand{
+    color: var(--main-clr);
+}
+
+.navbar-brand:hover{
+    color: var(--main-clr);
+}
+
+.pp-btn{
+    background-color: var(--main-clr);
+    color: white;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.178);
+}
+
+.login-btn{
+    color: var(--main-clr);
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.login-btn:hover{
+    color: var(--main-clr);
+}
+
+.dropdown-item, .dropdown-item:hover{
+    color:var(--main-clr);
+}
+
+.dropdown-menu{
+    display: none;
+    border-radius: 3px;
+    border-color:var(--main-clr);
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+
+/* header  */
+
+.header-section{
+    background-image: url('../images/1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    background-color: rgba(0, 0, 0, 0.452);
+}
+
+.header-row{
+    height: 100vh;
+    color:var(--main-clr);
+}
+
+.header-col{
+    margin-bottom: 7rem;
+}
+
+.header-main-head{
+    font-size: 4rem;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: text-ani 5.5s 1;
+}
+
+@keyframes text-ani{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+.header-sub-head{
+    font-size: x-large;
+}
+
+/* card  */
+
+.propty-card{
+    height: 400px;
+    width: auto;
+    box-shadow: 8px 8px 0px 0 var(--main-clr);
+    border-radius: 0;
+    transition: 0.3s all;
+}
+
+.propty-card:hover{
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.342);
+    transform: translateY(-1rem);
+}
+
+.propty-img{
+    width: 80px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.propty-btn{
+    background-color: var(--main-clr);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.propty-heading{
+    color: var(--main-clr);
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.propty-heading::after{
+    position: absolute;
+    content: '';
+    left: 42%;
+    bottom: 0;
+    width: 20%;
+    height: 3px;
+    border-radius: 5px;
+    border-bottom: 3px solid var(--main-clr);
+}
+
+/* footer  */
+
+.footer-section{
+    background-color: #285430;
+}
+
+.social-icons{
+    font-size: 1.2rem;
+    color: white;
+    background-color: #5F8D4E;
+    padding: 0.3rem;
+    width:30px;
+    margin: 1rem 0;
+}
+
+.info-icons{
+    color: var(--main-clr);
+    padding: 0.3rem;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.info-link{
+    color: white;
+}
+
+.info-link:hover{
+    color: var(--main-clr);
+}
+
+.explore-link{
+    color: white;
+}
+
+.explore-link:hover{
+    color: var(--main-clr);
+}
+
+/* breadcrum  */
+
+.bread-section{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    background-color: rgba(0, 0, 0, 0.644);
+}
+
+.bread-col{
+    padding: 8rem 0;
+    margin-top: 5rem;
+}
+
+.bread-col h1{
+    letter-spacing: 5px;
+}
+
+.buy-section{
+    background-image: url('../images/buy-a-property.jpeg');
+}
+
+.sell-section{
+    background-image: url('../images/sell.jpg');
+}
+
+/* buy sell rent property form  */
+
+.propty-input{
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    letter-spacing: 1px;
+}
+
+::placeholder, option{
+    color: rgba(0, 0, 0, 0.541);
+}
+
+.submit-btn{
+    background-color: var(--main-clr);
+    color: white;
+    padding: 0.7rem 2.5rem;
+    border-radius: 3px;
+}
+
+.propty-clickable-card{
+    background-color: var(--main-clr);
+    border-color:rgba(0, 0, 0, 0.541);
+}
+
+.propty-clickable-card p{
+    color: white;
+}

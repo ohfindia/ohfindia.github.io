@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bestech Property Dealer</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+</head>
+
+<!-- navbar  -->
+
+<div id="header"></div>
+
+<!-- breadcrumb -->
+
+<section class="bread-section sell-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-grid align-items-center bread-col">
+                <h1 class="text-center text-white bold">Sell a Property</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- start buy property form  -->
+
+<section class="space">
+
+    <div class="container">
+        <div class="row propty-row d-flex align-items-center justify-content-center">
+            <div class="col-md-6">
+                <form class="form" method="post" enctype="text/plain">
+                    <div class="row">
+                        <div class="col-sm-6 my-2">
+                            <input type="text" class="propty-input" name="name" id="name" placeholder="Full Name"
+                                required />
+                        </div>
+                        <div class="col-sm-6 my-2">
+                            <input type="number" class="propty-input" name="number" id="number"
+                                placeholder="Mobile Number" required />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 my-2">
+                            <input type="email" class="propty-input" name="email" id="emailid" placeholder="Email"
+                                required />
+                        </div>
+                        <div class="col-sm-6 my-2">
+                            <select type="text" class="propty-input" name="whoyouare" id="whoyouare"
+                                style="height: 100%" required>
+                                <option value="">Interest in Buying</option>
+                                <option value="Job Seeker">Flats</option>
+                                <option value="Employer">Apartments</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 my-2">
+                            <textarea name="message" id="message" class="propty-input" id="message"
+                                placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <a class="submit-btn" name="submit" id="sb-btn" onclick="sendemail()">Submit</a>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center">
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, cum.</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card p-3 propty-clickable-card">
+                    <a href="buy-form.html" class="text-center">
+                        <img src="images/shopping-cart.png" class="img-fluid propty-img" alt="" />
+                        <p class="bold mb-0">Buy a Property</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3 propty-clickable-card">
+                    <a href="rent-form.html" class="mx-5 text-center">
+                        <img src="images/house.png" class="img-fluid propty-img" alt="" />
+                        <p class="bold mb-0">Rent a Property</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3 propty-clickable-card">
+                    <a href="sell-form.html" class="text-center">
+                        <img src="images/town.png" class="img-fluid propty-img" alt="" />
+                        <p class="bold mb-0">Sell a Property</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- end buy property form  -->
+
+<!-- footer -->
+
+<div id="footer"></div>
+
+<!-- smtp script  -->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendemail() {
+
+        var name = document.getElementById('name').value;
+        var company = document.getElementById('company').value;
+        var number = document.getElementById('number').value;
+        var email = document.getElementById('emailid').value;
+        var website = document.getElementById('website').value;
+        var whoyouare = document.getElementById('whoyouare').value;
+        var message = document.getElementById('message').value;
+
+        var body = "Name : " + name + "<br/>Company Name : " + company + "<br/>Contact Number : " + number +
+            "<br/>Email : " + email + "<br/>Website : " + website + "<br/>Who you are : " + whoyouare +
+            "<br/>Message : " + message;
+
+        Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "c55795374@gmail.com",
+            Password: "98CDF06B146183BCC6BEA0224AD7F2223B92",
+            To: 'info@agrts.com',
+            From: "c55795374@gmail.com",
+            Subject: "New Contact form Submission",
+            Body: body
+        }).then(
+            window.location.href = "./thankyou.html"
+        );
+
+    }
+</script>
+</body>
+
+</html>
