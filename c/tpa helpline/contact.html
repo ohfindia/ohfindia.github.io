@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TPA Helpline</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- navbar  -->
+    
+    <div id="header"></div>
+
+    <!-- start contact form  -->
+
+    <section class="space contact-info-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 d-flex justify-content-center align-items-center text-center">
+                    <div class="box">
+                        <img src="images/location-100.png" class="img-fluid" alt="">
+                        <h5 class="my-2 text-uppercase">Address</h5>
+                        <p>SCO No. 2417-18, 2nd Floor, Sector 22-C, Chandigarh - 160022</p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center align-items-center text-center">
+                    <div class="box">
+                        <img src="images/phone-message-100.png" class="img-fluid" alt="">
+                        <h5 class="my-2 text-uppercase">Phone</h5>
+                        <p>+91-9115100800</p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center align-items-center text-center">
+                    <div class="box">
+                        <img src="images/mail-account-96.png" class="img-fluid" alt="">
+                        <h5 class="my-2 text-uppercase">Emaill Address</h5>
+                        <p>contact@tpahelpline.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="space contact-info-section-2">
+        <div class="container">
+            <div class="row contact-row-2 d-flex align-items-center justify-content-center">
+                <div class="col-md-6">
+                    <h5 class="bold">Need Help ?</h5>
+                    <h3 class="text-muted">Leave Us A Message</h3>
+                    <form action="" enctype="text/plain">
+                        <input type="text" placeholder="Name" class="tpa-input">
+                        <input type="number" placeholder="Contact Number" class="tpa-input">
+                        <input type="emial" placeholder="Email" class="tpa-input">
+                        <textarea name="" id="" cols="30" rows="4" placeholder="Message" class="tpa-input"></textarea>
+                        <button class="px-3 py-2 blue-bg text-white border-0 rounded-1 sb-btn">Submit</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/life-insurance.png" class="img-fluid form-img" alt="">
+                    <p class="text-center mb-0 text-form">TPA helpline takes the burden <br> to intervene and make your life easy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- end contact form  -->
+
+    <!--  footer  -->
+
+    <div id="footer"></div>
+
+</body>
+
+</html>

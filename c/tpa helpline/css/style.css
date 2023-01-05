@@ -185,11 +185,45 @@ li{
 
 /* end section  */
 
+/* start how we help section  */
+
+.summary-text{
+    display: none;
+}
+
+.summary{
+    display: inline-block;  
+    position: relative;
+    color: #112D4E;
+    cursor:pointer;
+}
+
+.summary::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: #112D4E;
+    transition: .3s all;
+}
+
+.summary-div:hover .summary::after{
+    width: 100%;
+}
+
+.summary-div:hover .summary-text{
+    display : block;
+}
+
+/* end how we help section  */
+
 /* start claim section  */
 
 .claim-section{
-    background-image: url('../images/doctor-is-going-examine-his-patient-using-his-stethoscope-sitting-people.jpg');
-    background-position: center;
+    background-image: url('../images/happy-family.jpg');
+    background-position: center right;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -231,6 +265,32 @@ li{
 }
 
 /* end footer  */
+
+/* start contact form  */
+
+.contact-info-section{
+    background-color: #efefef;
+}
+
+.tpa-input{
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border:none;
+    border-bottom : 1px solid #112D4E;
+    color : #112D4E;
+}
+
+::placeholder{
+    color: #112D4E;
+}
+
+.text-form{
+    font-size: large;
+}
+
+/* end contact form  */
 
 /* media queries  */
 

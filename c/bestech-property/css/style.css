@@ -105,7 +105,6 @@ a{
 .header-row{
     height: 100vh;
     /* color:var(--main-clr); */
-    color: white;
 }
 
 .header-col{
@@ -113,6 +112,7 @@ a{
 }
 
 .header-main-head{
+    color: white;
     font-size: 4rem;
     white-space: nowrap;
     overflow: hidden;
@@ -132,6 +132,7 @@ a{
 .header-sub-head{
     font-size: x-large;
     text-transform: capitalize;
+    color: white;
 }
 
 /* card  */
@@ -209,7 +210,7 @@ a{
 }
 
 .info-link:hover{
-    color: var(--main-clr);
+    color: #5F8D4E;
 }
 
 .explore-link{
@@ -217,7 +218,7 @@ a{
 }
 
 .explore-link:hover{
-    color: var(--main-clr);
+    color: #5F8D4E;
 }
 
 /* breadcrum  */
@@ -301,6 +302,12 @@ a{
     }
     .header-sub-head{
         font-size: large;
+    }
+    .propty-row .col-md-6:nth-of-type(2){
+        margin-top: 3rem;
+    }
+    .propty-row-2 .col-md-4:nth-of-type(2) {
+        margin: 1rem 0;
     }
 }
 
