@@ -290,6 +290,13 @@ li{
     font-size: large;
 }
 
+.form-img{
+    width: 60%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 /* end contact form  */
 
 /* media queries  */
@@ -321,6 +328,10 @@ li{
 
     .foot-col{
         margin: 2rem 0;
+    }
+
+    .contact-row-2 .col-md-6:nth-of-type(2){
+        margin-bottom: 2rem;
     }
 }
 

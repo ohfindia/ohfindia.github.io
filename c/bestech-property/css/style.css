@@ -50,6 +50,7 @@ a{
 
 .navbar-brand{
     color: var(--main-clr);
+    display : none;
 }
 
 .navbar-brand:hover{
@@ -64,8 +65,6 @@ a{
 
 .login-btn{
     color: var(--main-clr);
-    font-size: 1.3rem;
-    text-align: center;
 }
 
 .login-btn:hover{
@@ -82,6 +81,10 @@ a{
     border-color:var(--main-clr);
 }
 
+.dropdown-item{
+    width: 100%;
+}
+
 .dropdown:hover .dropdown-menu{
     display: block;
 }
@@ -89,7 +92,6 @@ a{
 .navbar-toggler{
     border: none;
 }
-
 
 /* header  */
 
@@ -104,7 +106,6 @@ a{
 
 .header-row{
     height: 100vh;
-    /* color:var(--main-clr); */
 }
 
 .header-col{
@@ -113,7 +114,7 @@ a{
 
 .header-main-head{
     color: white;
-    font-size: 4rem;
+    font-size: 4.5rem;
     white-space: nowrap;
     overflow: hidden;
     animation: text-ani 5.5s 1;
@@ -137,9 +138,13 @@ a{
 
 /* card  */
 
+.card-section{
+    padding-top: 3rem;
+}
+
 .propty-card{
-    padding: 4rem 2rem;
-    box-shadow: 8px 8px 0px 0 var(--main-clr);
+    padding: 3rem 2rem;
+    box-shadow: 5px 5px 5px 0 var(--main-clr);
     border-radius: 0;
     transition: 0.3s all;
 }
@@ -281,18 +286,80 @@ a{
     color: white;
 }
 
+/* featured section  */
+
+.carousel-control-next-lg, .carousel-control-prev-lg{
+    width: 30px;
+    height: 30px;
+    top: 45%;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.carousel-control-next-lg{
+    right: -25px;
+}
+
+.carousel-control-prev-lg{
+    left: -25px;
+}
+
+.featured-sm-screen{
+    display : none;
+}
+
+.carousel-control-prev-sm, .carousel-control-next-sm{
+    width: 30px;
+    height: 30px;
+    top: 45%;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.carousel-control-next-sm{
+    right: 20px;
+}
+
+.carousel-control-prev-sm{
+    left: 20px;
+}
+
+/* testimonial section  */
+
+.testimonial-box{
+    background-color: #efefef;
+}
+
+.star-icon{
+    color : #FDFF00;
+}
+
+.testimonial-text{
+    font-size: 0.9rem;
+}
+
+/* media query  */
+
 @media (max-width:1200px){
     .header-main-head{
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 }
 
 @media (max-width: 992px){
     .header-main-head{
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
     .header-sub-head{
         font-size: large;
+    }
+
+    .navbar-brand{
+        display : block;
+    }
+
+    .logo-div{
+        display : none;
     }
 }
 
@@ -309,11 +376,20 @@ a{
     .propty-row-2 .col-md-4:nth-of-type(2) {
         margin: 1rem 0;
     }
+    .featured-lg-screen{
+        display: none;  
+    }
+    .featured-sm-screen{
+        display : block;
+    }
+    .testimonial-row .col-md-4:nth-of-type(2){
+        margin: 1rem 0;
+    }
 }
 
 @media (max-width: 560px){
     .header-main-head{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     .header-sub-head{
         font-size: small;

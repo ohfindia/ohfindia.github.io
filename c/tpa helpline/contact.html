@@ -53,19 +53,19 @@
     <section class="space contact-info-section-2">
         <div class="container">
             <div class="row contact-row-2 d-flex align-items-center justify-content-center">
-                <div class="col-md-6">
+                <div class="col-md-6 order-2 order-md-1">
                     <h5 class="bold">Need Help ?</h5>
                     <h3 class="text-muted">Leave Us A Message</h3>
-                    <form action="" enctype="text/plain">
-                        <input type="text" placeholder="Name" class="tpa-input">
-                        <input type="number" placeholder="Contact Number" class="tpa-input">
-                        <input type="emial" placeholder="Email" class="tpa-input">
-                        <textarea name="" id="" cols="30" rows="4" placeholder="Message" class="tpa-input"></textarea>
+                    <form action="form.php" enctype="text/plain" method="post">
+                        <input type="text" placeholder="Name" class="tpa-input" id="name">
+                        <input type="number" placeholder="Contact Number" class="tpa-input" id="number">
+                        <input type="emial" placeholder="Email" class="tpa-input" id="email">
+                        <textarea name="" id="" cols="30" rows="4" placeholder="Message" class="tpa-input" id="message"></textarea>
                         <button class="px-3 py-2 blue-bg text-white border-0 rounded-1 sb-btn">Submit</button>
                     </form>
                 </div>
-                <div class="col-md-6">
-                    <img src="images/life-insurance.png" class="img-fluid form-img" alt="">
+                <div class="col-md-6 d-grid order-1 order-md-2">
+                    <img src="images/close-up-doctor.png" class="img-fluid form-img" alt="">
                     <p class="text-center mb-0 text-form">TPA helpline takes the burden <br> to intervene and make your life easy</p>
                 </div>
             </div>
@@ -77,6 +77,33 @@
     <!--  footer  -->
 
     <div id="footer"></div>
+
+    <!-- smtp script  -->
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendform() {
+
+            var name = document.getElementById('name').value ;
+            var number = document.getElementById('number').value ;
+            var email = document.getElementById('email').value ;
+            var message = document.getElementById('message').value ;
+
+            var body = "Name : " + name + "<br/>Contact Number : " + number + "<br/>Email : " + email + "<br/>Message : " + message;  
+
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "c55795374@gmail.com",
+                Password: "98CDF06B146183BCC6BEA0224AD7F2223B92",
+                To: 'c55795374@gmail.com',
+                From: "c55795374@gmail.com",
+                Subject: "New Contact Form",
+                Body: body
+            }).then(
+                message => "Your form submitted successfully"
+            );
+
+        }
+    </script> -->
 
 </body>
 
