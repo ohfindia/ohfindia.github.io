@@ -333,6 +333,11 @@ li{
     .contact-row-2 .col-md-6:nth-of-type(2){
         margin-bottom: 2rem;
     }
+
+    .claim-section{
+        background-blend-mode: soft-light;
+        background-color: rgba(255, 255, 255, 0.508);
+    }
 }
 
 @media(max-width: 560px){

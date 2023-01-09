@@ -56,12 +56,12 @@
                 <div class="col-md-6 order-2 order-md-1">
                     <h5 class="bold">Need Help ?</h5>
                     <h3 class="text-muted">Leave Us A Message</h3>
-                    <form action="form.php" enctype="text/plain" method="post">
-                        <input type="text" placeholder="Name" class="tpa-input" id="name">
-                        <input type="number" placeholder="Contact Number" class="tpa-input" id="number">
-                        <input type="emial" placeholder="Email" class="tpa-input" id="email">
-                        <textarea name="" id="" cols="30" rows="4" placeholder="Message" class="tpa-input" id="message"></textarea>
-                        <button class="px-3 py-2 blue-bg text-white border-0 rounded-1 sb-btn">Submit</button>
+                    <form action="" enctype="text/plain" method="post">
+                        <input type="text" placeholder="Name" name="name" class="tpa-input" id="name">
+                        <input type="number" placeholder="Contact Number" name="number" class="tpa-input" id="number">
+                        <input type="email" placeholder="Email" name="email" class="tpa-input" id="email">
+                        <textarea name="" id="" cols="30" rows="4" placeholder="Message" name="message" class="tpa-input" id="message"></textarea>
+                        <button class="px-3 py-2 blue-bg text-white border-0 rounded-1 sb-btn" name="send" onclick="sendform()">Submit</button>
                     </form>
                 </div>
                 <div class="col-md-6 d-grid order-1 order-md-2">
@@ -79,7 +79,7 @@
     <div id="footer"></div>
 
     <!-- smtp script  -->
-    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
         function sendform() {
 
@@ -92,18 +92,18 @@
 
             Email.send({
                 Host: "smtp.elasticemail.com",
-                Username: "c55795374@gmail.com",
-                Password: "98CDF06B146183BCC6BEA0224AD7F2223B92",
-                To: 'c55795374@gmail.com',
-                From: "c55795374@gmail.com",
+                Username: "tpatesting001@gmail.com",
+                Password: "E7AC73F55C3701DB802889851C9A757AEA0B",
+                To: 'tpatesting001@gmail.com',
+                From: "tpatesting001@gmail.com",
                 Subject: "New Contact Form",
                 Body: body
             }).then(
-                message => "Your form submitted successfully"
+                message => alret( "Your form submitted successfully")
             );
 
         }
-    </script> -->
+    </script>
 
 </body>
 
