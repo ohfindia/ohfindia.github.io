@@ -86,6 +86,10 @@ li{
     background-color: rgba(0, 0, 0, 0.700);
 }
 
+button{
+    border: none;
+}
+
 /* start breadcrumb  */
 
 .bread-row{
@@ -693,6 +697,7 @@ input[type="file"]::file-selector-button:hover{
     border: 2px solid var(--logo-blue);
     border-radius : 3px;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .submit-btn:hover{

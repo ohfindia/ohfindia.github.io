@@ -43,13 +43,15 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <a href="tel:+91-9988710610" class="mx-1 text-white">Call Info : <i class="fa-solid fa-phone-volume"></i> +91-9988710610</a>
-                    <a href="mailto:info@agrts.com" class="mx-1 text-white">Mail Id : <i class="fa-solid fa-at"></i> info@agrts.com</a>
+                    <a href="tel:+91-9988710610" class="mx-1 text-white">Call Info : <i
+                            class="fa-solid fa-phone-volume"></i> +91-9988710610</a>
+                    <a href="mailto:info@agrts.com" class="mx-1 text-white">Mail Id : <i class="fa-solid fa-at"></i>
+                        info@agrts.com</a>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- end note  -->
 
     <!-- start navbar  -->
@@ -135,26 +137,28 @@
                     <form class="form" method="post" enctype="text/plain">
                         <div class="row">
                             <div class="col-sm-6 my-3">
-                                <input type="text" class="agrts-input" name="name" id="name" placeholder="Name"
-                                    required />
+                                <input type="text" class="agrts-input" name="name" id="name" placeholder="Name" required
+                                    autocomplete="off" />
                             </div>
                             <div class="col-sm-6 my-3">
-                                <input type="text" class="agrts-input" name="company" id="company" placeholder="Company Name" required />
+                                <input type="text" class="agrts-input" name="company" id="company"
+                                    placeholder="Company Name" autocomplete="off" />
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-6 my-3">
-                                <input type="number" class="agrts-input" name="number" id="number"
-                                    placeholder="Contact Number" required />
+                                <input type="text" class="agrts-input" name="number" id="number"
+                                    placeholder="Contact Number" required autocomplete="off" />
                             </div>
                             <div class="col-sm-6 my-3">
                                 <input type="email" class="agrts-input" name="email" id="emailid" placeholder="Email"
-                                    required />
+                                    required autocomplete="off" />
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-6 my-3">
-                                <input type="text" class="agrts-input" name="website" id="website" placeholder="Website" />
+                                <input type="text" class="agrts-input" name="website" id="website" placeholder="Website"
+                                    autocomplete="off" />
                             </div>
                             <div class="col-sm-6 my-3">
                                 <select type="text" class="agrts-input" name="whoyouare" id="whoyouare"
@@ -168,7 +172,7 @@
                         <div class="row">
                             <div class="col-12 my-3">
                                 <textarea name="message" id="message" class="agrts-input" id="message"
-                                    placeholder="Message"></textarea>
+                                    placeholder="Message" required autocomplete="off"></textarea>
                             </div>
                         </div>
                         <div class="mt-3">
@@ -256,15 +260,39 @@
     <script>
         function sendemail() {
 
-            var name = document.getElementById('name').value ;
-            var company = document.getElementById('company').value ;
-            var number = document.getElementById('number').value ;
-            var email = document.getElementById('emailid').value ;
-            var website = document.getElementById('website').value ;
-            var whoyouare = document.getElementById('whoyouare').value ;
-            var message = document.getElementById('message').value ;
+            var name = document.getElementById('name').value;
+            var company = document.getElementById('company').value;
+            var number = document.getElementById('number').value;
+            var email = document.getElementById('emailid').value;
+            var website = document.getElementById('website').value;
+            var whoyouare = document.getElementById('whoyouare').value;
+            var message = document.getElementById('message').value;
 
-            var body = "Name : " + name +"<br/>Company Name : " + company + "<br/>Contact Number : " + number + "<br/>Email : " + email + "<br/>Website : " + website + "<br/>Who you are : " + whoyouare + "<br/>Message : " + message;  
+            var body = "Name : " + name + "<br/>Company Name : " + company + "<br/>Contact Number : " + number +
+                "<br/>Email : " + email + "<br/>Website : " + website + "<br/>Who you are : " + whoyouare +
+                "<br/>Message : " + message;
+
+            if (name == "") {
+                window.alert("Name must be filled out");
+                return false;
+            }
+
+            if (number == "") {
+                window.alert("Contact number must be filled out");
+                return false;
+            }
+
+            if (email == "") {
+                window.alert("Email must be filled out");
+                return false;
+            }
+
+            if (whoyouare == "") {
+                window.alert("Who are you tell us");
+                return false;
+            }
+
+            return true;
 
             Email.send({
                 Host: "smtp.elasticemail.com",
@@ -275,7 +303,7 @@
                 Subject: "New Contact form Submission",
                 Body: body
             }).then(
-                window.location.href="./thankyou.html"
+                window.location.href = "./thankyou.html"
             );
 
         }
