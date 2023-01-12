@@ -8,19 +8,18 @@ require_once __DIR__ . '/PHPMailer/PHPMailer/src/PHPMailer.php';
 require_once __DIR__ . '/PHPMailer/PHPMailer/src/SMTP.php';
 
 
-function emailForm($name, $company, $number, $email, $website, $finder, $message){
+function emailResume($name, $email, $number, $salary, $remarks, $code, $file_name){
     // passing true in constructor enables exceptions in PHPMailer
     $mail = new PHPMailer(true);
 
     try{
 
         $body = 'Name : ' . $name . "<br/>"
-        . 'Company : ' . $company . "<br/>"
-        . 'Phone Number : ' . $number . "<br/>"
         . 'Email : ' . $email . "<br/>"
-        . 'Website : ' . $website . "<br/>"
-        . 'Who are you : ' . $finder . "<br/>"
-        . 'Message : ' . $message ;
+        . 'Phone Number : ' . $number . "<br/>"
+        . 'Salary : ' . $salary . "<br/>"
+        . 'Remarks : ' . $remarks . "<br/>"
+        . 'Code : ' . $code ;
 
         // Server settings
         // $mail->SMTPDebug = SMTP::DEBUG_SERVER; // for detailed debug output
@@ -39,9 +38,9 @@ function emailForm($name, $company, $number, $email, $website, $finder, $message
 
         // Setting the email content
         $mail->IsHTML(true);
-        $mail->Subject = "New Contact Form Submission";
+        $mail->Subject = "New Recruitment Form Submission";
         $mail->Body = $body;
-        // $mail->addAttachment('resumes/'.$file_name);
+        $mail->addAttachment('resumes/'.$file_name);
         // $mail->AltBody = 'Plain text message body for non-HTML email client. Gmail SMTP email body.';
 
         $mail->send();

@@ -137,31 +137,29 @@
                     <form class="form" method="post" enctype="text/plain">
                         <div class="row">
                             <div class="col-sm-6 my-3">
-                                <input type="text" class="agrts-input" name="name" id="name" placeholder="Name" required
-                                    autocomplete="off" />
+                                <input type="text" class="agrts-input" name="name" id="name" placeholder="Name" required/>
                             </div>
                             <div class="col-sm-6 my-3">
                                 <input type="text" class="agrts-input" name="company" id="company"
-                                    placeholder="Company Name" autocomplete="off" />
+                                    placeholder="Company Name" />
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-6 my-3">
                                 <input type="text" class="agrts-input" name="number" id="number"
-                                    placeholder="Contact Number" required autocomplete="off" />
+                                    placeholder="Contact Number" required/>
                             </div>
                             <div class="col-sm-6 my-3">
-                                <input type="email" class="agrts-input" name="email" id="emailid" placeholder="Email"
-                                    required autocomplete="off" />
+                                <input type="email" class="agrts-input" name="email" id="email" placeholder="Email"
+                                    required />
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-6 my-3">
-                                <input type="text" class="agrts-input" name="website" id="website" placeholder="Website"
-                                    autocomplete="off" />
+                                <input type="text" class="agrts-input" name="website" id="website" placeholder="Website" />
                             </div>
                             <div class="col-sm-6 my-3">
-                                <select type="text" class="agrts-input" name="whoyouare" id="whoyouare"
+                                <select type="text" class="agrts-input" name="finder" id="finder"
                                     style="height: 100%" required>
                                     <option value="">Who you are</option>
                                     <option value="Job Seeker">Job Seeker</option>
@@ -172,11 +170,11 @@
                         <div class="row">
                             <div class="col-12 my-3">
                                 <textarea name="message" id="message" class="agrts-input" id="message"
-                                    placeholder="Message" required autocomplete="off"></textarea>
+                                    placeholder="Message" required></textarea>
                             </div>
                         </div>
                         <div class="mt-3">
-                            <a class="submit-btn" name="submit" id="sb-btn" onclick="sendemail()">Submit</a>
+                            <button type="submit" class="submit-btn bg-white" name="submit" id="sb-btn">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -258,55 +256,44 @@
     <!-- smtp script  -->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
-        function sendemail() {
+        var rForm = document.querySelector('form');
+
+        rForm.addEventListener('submit', (e) => {
+            e.preventDefault();
 
             var name = document.getElementById('name').value;
             var company = document.getElementById('company').value;
             var number = document.getElementById('number').value;
-            var email = document.getElementById('emailid').value;
+            var email = document.getElementById('email').value;
             var website = document.getElementById('website').value;
-            var whoyouare = document.getElementById('whoyouare').value;
+            var whoyouare = document.getElementById('finder').value;
             var message = document.getElementById('message').value;
+            
+            const formData = new FormData();
+            formData.append('name',name);
+            formData.append('company',company);
+            formData.append('number',number);
+            formData.append('email',email);
+            formData.append('website',website);
+            formData.append('finder',finder);
+            formData.append('message', message);
 
-            var body = "Name : " + name + "<br/>Company Name : " + company + "<br/>Contact Number : " + number +
-                "<br/>Email : " + email + "<br/>Website : " + website + "<br/>Who you are : " + whoyouare +
-                "<br/>Message : " + message;
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
 
-            if (name == "") {
-                window.alert("Name must be filled out");
-                return false;
-            }
+                    const res = JSON.parse(xhttp.responseText);
+                    if(res.error === true){
+                        alert(res.message);
+                    } else{
+                        window.location.href="https://agrts.com/thankyou.html";
+                    }                    
+                }
+            };
+            xhttp.open("POST", "handlecontactform.php", true);
+            xhttp.send(formData);
+        })
 
-            if (number == "") {
-                window.alert("Contact number must be filled out");
-                return false;
-            }
-
-            if (email == "") {
-                window.alert("Email must be filled out");
-                return false;
-            }
-
-            if (whoyouare == "") {
-                window.alert("Who are you tell us");
-                return false;
-            }
-
-            return true;
-
-            Email.send({
-                Host: "smtp.elasticemail.com",
-                Username: "c55795374@gmail.com",
-                Password: "98CDF06B146183BCC6BEA0224AD7F2223B92",
-                To: 'c55795374@gmail.com',
-                From: "c55795374@gmail.com",
-                Subject: "New Contact form Submission",
-                Body: body
-            }).then(
-                window.location.href = "./thankyou.html"
-            );
-
-        }
     </script>
 </body>
 
