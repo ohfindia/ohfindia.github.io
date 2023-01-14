@@ -19,15 +19,21 @@ a{
 }
 
 .heading-clr{
-    color:#285430;
+    color: var(--main-clr);
 }
 
 .heading-clr:hover{
-    color:#285430;
+    color: var(--main-clr);
+}
+
+.sub-heading{
+    color: var(--sub-clr);
 }
 
 :root{
-    --main-clr: #285430;
+    --main-clr:  #003970;
+    --btn-clr: #001e44;
+    --sub-clr: #3589fd;
 }
 
 :focus{
@@ -41,11 +47,8 @@ a{
 /* navbar */
 
 .navbar{
-    background-color: white;
-    position: absolute;
-    width: 90%;
-    margin-top: 1rem;
-    left: 5%;
+    background-color: var(--main-clr);
+    padding: 1rem 4rem;
 }
 
 .navbar-brand{
@@ -96,29 +99,18 @@ a{
 /* header  */
 
 .header-section{
-    background-image: url('../images/1.jpg');
+    background-image: url('../images/Untitled-2.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-blend-mode: soft-light;
-    background-color: rgba(0, 0, 0, 0.452);
 }
 
 .header-row{
-    height: 100vh;
-}
-
-.header-col{
-    margin-bottom: 7rem;
+    padding: 11rem 0;
 }
 
 .header-main-head{
-    color: white;
-    font-size: 4.5rem;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: text-ani 5.5s 1;
-    text-transform: capitalize;
+    font-size: 3.5rem;
 }
 
 @keyframes text-ani{
@@ -133,7 +125,6 @@ a{
 .header-sub-head{
     font-size: x-large;
     text-transform: capitalize;
-    color: white;
 }
 
 /* card  */
@@ -146,12 +137,14 @@ a{
     padding: 3rem 2rem;
     box-shadow: 5px 5px 5px 0 var(--main-clr);
     border-radius: 0;
+    border-color:rgba(0, 0, 0, 0.251);
     transition: 0.3s all;
 }
 
 .propty-card:hover{
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.342);
     transform: translateY(-1rem);
+    border:none;
 }
 
 .propty-img{
@@ -162,7 +155,7 @@ a{
 }
 
 .propty-btn{
-    background-color: var(--main-clr);
+    background-color: var(--btn-clr);
     color: white;
     padding: 0.5rem 1.5rem;
     border-radius: 3px;
@@ -191,13 +184,13 @@ a{
 /* footer  */
 
 .footer-section{
-    background-color: #285430;
+    background-color: var(--main-clr);
 }
 
 .social-icons{
     font-size: 1.2rem;
     color: white;
-    background-color: #5F8D4E;
+    background-color: var(--btn-clr);
     padding: 0.3rem;
     width:30px;
     margin: 1rem 0;
@@ -214,16 +207,12 @@ a{
     color: white;
 }
 
-.info-link:hover{
-    color: #5F8D4E;
-}
-
 .explore-link{
     color: white;
 }
 
-.explore-link:hover{
-    color: #5F8D4E;
+.explore-link:hover, .info-link:hover{
+    color: var(--btn-clr);
 }
 
 /* breadcrum  */
@@ -279,7 +268,7 @@ a{
 
 .propty-clickable-card{
     background-color: var(--main-clr);
-    border-color:rgba(0, 0, 0, 0.541);
+    border:none;
 }
 
 .propty-clickable-card p{
@@ -340,6 +329,8 @@ a{
 
 .reviews-img{
     box-shadow: 0 0 15px 0 black;
+    width: 200px;
+    height: 200px;
 }
 
 /* media query  */
@@ -393,7 +384,7 @@ a{
 
 @media (max-width: 560px){
     .header-main-head{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .header-sub-head{
         font-size: small;
